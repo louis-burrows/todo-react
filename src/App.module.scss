@@ -1,0 +1,16 @@
+.appContainer {
+  background: rgb(180,180,195);
+  background: linear-gradient(129deg, rgba(180,180,195,1) 0%, rgba(106,106,138,1) 35%, rgba(46,90,99,1) 100%);
+  width: 100vw;
+  height: 100vh;
+  .title {
+    text-align: center;
+    padding: 30px;
+  }
+  .listContainer {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+}

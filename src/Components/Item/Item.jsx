@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Button from "../Button";
 import styles from "./Item.module.scss";
 
@@ -15,9 +15,11 @@ const Item = (props) => {
 
   return (
     <>
-      <p className={styles[completedStyle]}>{content}</p>
-      <Button text="Delete" handleClick={() => deleteEntry(index)} />
-      <Button text="Complete" handleClick={() => toggleCompleted(index, isCompleted)}/>
+      <section className={styles.itemContainer}>
+        <p className={styles[completedStyle]}>{content}</p>
+        <Button text="Delete" handleClick={() => deleteEntry(index)} />
+        <Button text="Mark as Done" handleClick={() => toggleCompleted(index, isCompleted)}/>
+      </section>
     </>
   );
 };

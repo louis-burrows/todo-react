@@ -1,7 +1,20 @@
-.notCompleted {
-  color: red;
+.itemContainer {
+  max-width: 450px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  margin: 30px auto;
+  gap: 10px;
+  font-weight: 600;
+  
+
+  .notCompleted {
+    color: rgb(20, 2, 2);
+    text-shadow: 1px 1px 1px rgb(173, 94, 94);
+  }
+  .isCompleted {
+    color: rgb(26, 99, 26);
+    text-shadow: 1px 1px 8px white;
+  }
 }
 
-.isCompleted {
-  color: green;
-}

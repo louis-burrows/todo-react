@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import List from "../../Containers/List";
 import styles from "./InputBox.module.scss";
 
 const InputBox = (props) => {
@@ -12,7 +11,7 @@ const InputBox = (props) => {
   const [idForItem, updateID] = useState(1);
 
   useEffect(() => {
-    maxIdCount ? updateID(maxIdCount+1) : "";
+    return maxIdCount ? updateID(maxIdCount+1) : "";
   }, [])
 
 
@@ -28,17 +27,18 @@ const InputBox = (props) => {
 
   return (
     <>
-        <label htmlFor="addToList">
+        <label className={styles.labelForInput} htmlFor="addToList">
           Type a list entry: 
         </label>
         
         <input 
+          className={styles.inputBar}
           type="text" 
           name="addToList" 
           id="addToList" 
           onInput={e => captureInput(e.target.value)} />
 
-        <button onClick={() => createItem()}> 
+        <button className={styles.submitButton} onClick={() => createItem()}> 
           Add Entry
         </button>
     </>

@@ -1,31 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './App.module.scss';
 
 import List from "./Containers/List";
-
 import InputBox from "./Components/InputBox"
-
-
 
 const App = () => {
 
-  
-  
   const [totalListItems, updateList] = useState([]);
 
-  
-
   return ( 
-
-    
     <>
+      <section className={styles.appContainer}>
 
-      <InputBox updateList={updateList} totalListItems={totalListItems} maxIdCount={totalListItems.slice(-1).id}/>
+        <h1 className={styles.title}>Make a To-Do List with React</h1>
 
-      <List listOfItems={totalListItems} updateList={updateList}/>
+        <section className={styles.listContainer}>
+          <InputBox updateList={updateList} totalListItems={totalListItems} maxIdCount={totalListItems.slice(-1).id}/>
+          <List listOfItems={totalListItems} updateList={updateList}/>
+        </section>
 
+      </section>
     </>
- 
   );
 }
  
