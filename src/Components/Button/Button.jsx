@@ -4,12 +4,12 @@ import styles from './Button.module.scss';
 
 const Button = (props) => {
   
-  const {text} = props;
+  const {text, handleClick} = props;
 
   return ( 
 
     <>
-      <button className={styles.standardButton} onClick={props.handleClick}>{text}</button>
+      <button className={styles.standardButton} onClick={handleClick}>{text}</button>
     </>
 
   );

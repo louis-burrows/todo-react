@@ -1,9 +1,17 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { shallow } from "enzyme";
 import Item from "./Item";
 
 describe("Item tests", () => {
+
+  let testComponent;
+
+  beforeEach(() => {
+    testComponent = shallow(<Item />);
+  })
+
   it("should render", () => {
-    expect(render(<Item />)).toBeTruthy();
+    expect(testComponent).toBeTruthy();
   });
+
 });

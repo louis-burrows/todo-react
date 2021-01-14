@@ -1,9 +1,17 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { shallow } from "enzyme";
 import InputBox from "./InputBox";
 
 describe("InputBox tests", () => {
+
+  let testComponent;
+
+  beforeEach(() => {
+    testComponent = shallow(<InputBox />);
+  })
+
   it("should render", () => {
-    expect(render(<InputBox />)).toBeTruthy();
+    expect(testComponent).toBeTruthy();
   });
+
 });
