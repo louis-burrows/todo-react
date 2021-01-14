@@ -5,11 +5,9 @@ import Button from "./Button";
 describe("Button tests", () => {
 
   let testComponent;
-  let mockFn;
 
   beforeEach(() => {
-    mockFn = jest.fn();
-    testComponent = shallow(<Button text={"test text"} handleClick={mockFn} />);
+    testComponent = shallow(<Button text={"test text"} />);
   })
 
   it("should render", () => {
@@ -21,15 +19,14 @@ describe("Button tests", () => {
     expect(buttonContainsText).toBe(true);
   });
 
-  it('should call the parent function with click', () => {
-    testComponent.find('button').simulate('click');
-    expect(mockFn).toHaveBeenCalledWith('click').toBe(true);
-  })
-
   it('the button should have the className of standardButton', () => {
     const hasCorrectClass= testComponent.find('button').hasClass('standardButton');
     expect(hasCorrectClass).toBe(true);
   })
 
-
 });
+
+// FURTHER TESTS
+
+// DOES THE BUTTON PROPAGATE THE ACTION OF handleClick WITH THE onClick?
+

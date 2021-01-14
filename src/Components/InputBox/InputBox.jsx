@@ -6,21 +6,18 @@ const InputBox = (props) => {
   const { maxIdCount } = props;
 
   const [currentInput, captureInput] = useState("");
-
-  
   const [idForItem, updateID] = useState(1);
 
   useEffect(() => {
     return maxIdCount ? updateID(maxIdCount+1) : "";
   }, [])
 
-
   const createItem = () => {
     props.updateList([
       ...props.totalListItems, 
-      {toDo: currentInput, 
+      { toDo: currentInput, 
         isCompleted: false, 
-        id: idForItem}
+        id: idForItem }
     ]);
     updateID(idForItem + 1);
   }
