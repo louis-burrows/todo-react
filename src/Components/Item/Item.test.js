@@ -18,7 +18,7 @@ describe("Item tests", () => {
 
   // it('should call the parent function with click', () => {
   //   testComponent.find('.buttonToggle').simulate('click');
-  //   expect(mockFn).toHaveBeenCalledWith('click').toBe(true);
+  //   expect(mockFn).toHaveBeenCalledWith();
   // })
 
 });
@@ -27,4 +27,4 @@ describe("Item tests", () => {
 //  DOES THE DELETE BUTTON CALL THE FUNCTION PASSED AS PROPS?
 //  DOES THE TOGGLE BUTTON CALL THE FUNCTION PASSED AS PROPS?
 //  IS TOGGLING THE completed CLASS OF THE PARAGRAPH REVERSIBLE, DOES THE CLASSNAME REVERT ON EVERY CLICK?
-
+//  ARE THE ELEMENTS RENDERED IN THE STATES THEY SHOULD BE PRIOR TO ANY USER INPUT?

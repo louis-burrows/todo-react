@@ -1,17 +1,2 @@
-import React from "react";
-import { shallow } from "enzyme";
-import List from "./List";
-
-describe("List tests", () => {
-
-  let testComponent;
-
-  beforeEach(() => {
-    testComponent = shallow(<List />);
-  })
-
-  it("should render", () => {
-    expect(testComponent).toBeTruthy();
-  });
-
-});
+//  ARE ALL THE TO-DO CONMPONENTS FROM listOfItems BEING MAPPED ON THE List COMPONENT?
+//  ARE ALL THE TO-DOs OF DIFFERENT ID'S?
