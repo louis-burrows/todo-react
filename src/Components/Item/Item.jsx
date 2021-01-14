@@ -20,7 +20,7 @@ const Item = (props) => {
         <p className={styles[completedStyle]}>{content}</p>
         <section className={styles.buttonSection}>
           <Button className={styles.buttonDelete} text="Delete" handleClick={() => deleteEntry(index)} />
-          <Button className={styles.buttonToggle} text="Mark as Done" handleClick={() => toggleCompleted(index, isCompleted)}/>
+          <Button className={styles.buttonToggle} text="Mark as Done" handleClick={() => toggleCompleted(index, isCompleted)} />
         </section>
       </section>
     </>
