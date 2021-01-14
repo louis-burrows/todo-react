@@ -28,5 +28,5 @@ describe("Button tests", () => {
 
 // FURTHER TESTS
 
-// DOES THE BUTTON PROPAGATE THE ACTION OF handleClick WITH THE onClick?
-
+// DOES THE BUTTON RECEIVE THE PROP OF handleClick?
+//"if the button is rendered, the onClick should be the prop of the function {handleClick}"
