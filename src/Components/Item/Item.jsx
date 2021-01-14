@@ -14,6 +14,7 @@ const Item = (props) => {
   const completedStyle = isCompleted ? "isCompleted" : "notCompleted";
 
   return (
+
     <>
       <section className={styles.itemContainer}>
         <p className={styles[completedStyle]}>{content}</p>
@@ -23,6 +24,7 @@ const Item = (props) => {
         </section>
       </section>
     </>
+    
   );
 };
 

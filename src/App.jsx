@@ -6,13 +6,11 @@ import InputBox from "./Components/InputBox"
 
 const App = () => {
 
-
   const [totalListItems, updateList] = useState(JSON.parse(localStorage.getItem("localStorageList")) || []);
 
   useEffect(() => {
     localStorage.setItem("localStorageList", JSON.stringify(totalListItems))  
   }, [totalListItems]);
-
 
   return ( 
 
@@ -28,9 +26,9 @@ const App = () => {
 
       </section>
     </>
+
   );
 }
-
  
 export default App;
 
