@@ -1,0 +1,23 @@
+.labelForInput {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.inputBar {
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 250px;
+}
+
+.submitButton {
+  padding: 3px;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(213, 250, 201);
+  }
+}

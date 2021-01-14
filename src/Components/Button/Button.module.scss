@@ -1,0 +1,10 @@
+.standardButton {
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  border: solid black 1px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(240, 255, 253);
+  }
+}
