@@ -8,7 +8,11 @@ const App = () => {
 
   const [totalListItems, updateList] = useState([]);
 
+  console.log(totalListItems);
+  
+
   return ( 
+
     <>
       <section className={styles.appContainer}>
 
