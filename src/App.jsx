@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './App.module.scss';
 
 import List from "./Containers/List";
@@ -6,10 +6,13 @@ import InputBox from "./Components/InputBox"
 
 const App = () => {
 
-  const [totalListItems, updateList] = useState([]);
 
-  console.log(totalListItems);
-  
+  const [totalListItems, updateList] = useState(JSON.parse(localStorage.getItem("localStorageList")) || []);
+
+  useEffect(() => {
+    localStorage.setItem("localStorageList", JSON.stringify(totalListItems))  
+  }, [totalListItems]);
+
 
   return ( 
 
@@ -27,6 +30,7 @@ const App = () => {
     </>
   );
 }
+
  
 export default App;
 
