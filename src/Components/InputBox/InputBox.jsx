@@ -9,8 +9,10 @@ const InputBox = (props) => {
   const [idForItem, updateID] = useState(1);
 
   useEffect(() => {
-    return maxIdCount ? updateID(maxIdCount+1) : "";
-  }, [])
+    if (maxIdCount) {
+      updateID(maxIdCount+1)
+    }
+  }, []);
 
   const createItem = () => {
     props.updateList([
@@ -23,8 +25,12 @@ const InputBox = (props) => {
   }
 
   return (
+
     <>
-        <label className={styles.labelForInput} htmlFor="addToList">
+        <label 
+          className={styles.labelForInput} 
+          htmlFor="addToList"
+        >
           Type a list entry: 
         </label>
         
@@ -33,12 +39,17 @@ const InputBox = (props) => {
           type="text" 
           name="addToList" 
           id="addToList" 
-          onInput={e => captureInput(e.target.value)} />
+          onInput={e => captureInput(e.target.value)} 
+        />
 
-        <button className={styles.submitButton} onClick={() => createItem()}> 
+        <button 
+          className={styles.submitButton} 
+          onClick={() => createItem()}
+        > 
           Add Entry
         </button>
     </>
+
   );
 };
 

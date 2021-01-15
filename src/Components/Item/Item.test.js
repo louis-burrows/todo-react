@@ -16,9 +16,14 @@ describe("Item tests", () => {
     expect(testComponent).toBeTruthy();
   });
 
+  it("should match the snapshot", () => {
+    expect(testComponent).toMatchSnapshot();
+  });
+
+  // TO BE EDITED
   // it('should call the parent function with click', () => {
   //   testComponent.find('.buttonToggle').simulate('click');
-  //   expect(mockFn).toHaveBeenCalledWith();
+  //   expect(mockFn).toHaveBeenCalledWith('click');
   // })
 
 });

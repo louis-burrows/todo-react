@@ -14,6 +14,10 @@ describe("App tests", () => {
     expect(testComponent).toBeTruthy();
   });
 
+  it("should match the snapshot", () => {
+    expect(testComponent).toMatchSnapshot();
+  });
+
 });
 
 
