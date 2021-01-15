@@ -16,12 +16,26 @@ const Item = (props) => {
   return (
 
     <>
-      <section className={styles.itemContainer}>
-        <p className={styles[completedStyle]}>{content}</p>
-        <section className={styles.buttonSection}>
-          <Button className={styles.buttonDelete} text="Delete" handleClick={() => deleteEntry(index)} />
-          <Button className={styles.buttonToggle} text="Mark as Done" handleClick={() => toggleCompleted(index, isCompleted)} />
-        </section>
+      <section 
+        className={styles.itemContainer}
+      >
+        <p className={styles[completedStyle]}>
+          {content}
+        </p>
+
+        <div className={styles.buttonSection}>
+          <Button 
+            className={styles.buttonDelete} 
+            text="Delete" 
+            handleClick={() => deleteEntry(index)} 
+          />
+          <Button 
+            className={styles.buttonToggle} 
+            text="Mark as Done" 
+            handleClick={() => toggleCompleted(index, isCompleted)} 
+          />
+        </div>
+        
       </section>
     </>
     

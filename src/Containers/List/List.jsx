@@ -21,16 +21,15 @@ const List = (props) => {
 
     <>
       {props.listOfItems.map((item, index) => { 
-        return (
-          <> 
-            <Item 
-              key={item.id} 
-              toggleCompleted={toggleCompleted} 
-              content={item.toDo} 
-              isCompleted={item.isCompleted} 
-              index={index} 
-              deleteEntry={deleteEntry} /> 
-          </>
+        return (          
+          <Item 
+            key={item.id}
+            toggleCompleted={toggleCompleted} 
+            content={item.toDo} 
+            isCompleted={item.isCompleted} 
+            index={index} 
+            deleteEntry={deleteEntry} 
+          />         
         )
       })}
     </>

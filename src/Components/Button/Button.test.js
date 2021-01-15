@@ -14,12 +14,16 @@ describe("Button tests", () => {
     expect(testComponent).toBeTruthy();
   });
 
+  it("should match the snapshot", () => {
+    expect(testComponent).toMatchSnapshot();
+  });
+
   it("should render the text on the button", () => {
     const buttonContainsText = testComponent.text().includes("test text");
     expect(buttonContainsText).toBe(true);
   });
 
-  it('the button should have the className of standardButton', () => {
+  it('should have the className of standardButton', () => {
     const hasCorrectClass= testComponent.find('button').hasClass('standardButton');
     expect(hasCorrectClass).toBe(true);
   })

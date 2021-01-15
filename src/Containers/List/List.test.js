@@ -1,7 +1,52 @@
+import React from "react";
+import { mount } from "enzyme";
+import List from "./List";
+
+describe("List tests", () => {
+
+  let testComponent;
+  const mockList = [
+    {
+      "toDo":"todo1",
+      "isCompleted":false,
+      "id":1
+    },
+    {
+      "toDo":"todo2",
+      "isCompleted":false,
+      "id":2
+    },
+    {
+      "toDo":"todo3",
+      "isCompleted":false,
+      "id":3
+    }
+  ]
+
+  beforeEach(() => {
+    testComponent = mount(<List listOfItems={mockList}/>);
+  })
+
+  it("should render", () => {
+    expect(testComponent).toBeTruthy();
+  });
+
+  it("should match the snapshot", () => {
+    expect(testComponent).toMatchSnapshot();
+  });
+
+  it("should contain three Item components, using the mock array", () => {
+    expect(testComponent.find(".itemContainer").length).toEqual(3);
+  });
+
+});
+
+
+
 //  FURTHER TESTS TO WRITE
 
-
-//  ARE ALL THE TO-DO CONMPONENTS FROM listOfItems BEING MAPPED ON THE List COMPONENT?
+//**DONE**
+//  ARE ALL THE TO-DO COMPONENTS FROM listOfItems BEING MAPPED ON THE List COMPONENT?
 //  Enter an array of objects into the property listOfItems?
 //  How many instances are mapped onto the page?
 //  Do the numbers of instances and objects within the array correspond?

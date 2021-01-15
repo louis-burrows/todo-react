@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-
 const Button = (props) => {
   
   const {text, handleClick} = props;
@@ -9,7 +8,12 @@ const Button = (props) => {
   return ( 
 
     <>
-      <button className={styles.standardButton} onClick={handleClick}>{text}</button>
+      <button 
+        className={styles.standardButton} 
+        onClick={handleClick}
+      >
+        {text}
+      </button>
     </>
 
   );
